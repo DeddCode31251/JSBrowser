@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSBrowser</title>
+    <link rel="stylesheet" href="design.css">
+</head>
+<body>
+    <div id="tabs">
+        <button id="add" title="New tab (Ctrl+T)" aria-label="New tab">+</button>
+    </div>
+
+    <div id="bar">
+        <button id="back" title="Back" aria-label="Back">&#8592;</button>
+        <button id="fwd" title="Forward" aria-label="Forward">&#8594;</button>
+        <button id="reload" title="Reload (Ctrl+R)" aria-label="Reload">&#8635;</button>
+        <button id="home" title="Home" aria-label="Home">&#8962;</button>
+        <input id="addr" type="text" spellcheck="false" autocomplete="off"
+        placeholder="Search or enter a web address (Ctrl+L)" aria-label="Address bar">
+        <button id="star" title="Bookmark this page" aria-label="Bookmark">&#9734;</button>
+        <button id="ext" title="Open in a real browser tab" aria-label="Open externally">&#8599;</button> 
+        <button id="hist" title="History" aria-label="History">&#9719;</button>
+        <button id="bm" title="All bookmarks" aria-label="Bookmarks">&#9776;</button>
+    </div>
+
+    <div id="marks"></div>
+    <div id="load"></div>
+    <div id="main">
+        <div id="views">
+            <div class="home" id="homepage">
+                <h1>JSBrowser</h1>
+                <form id="hform">
+                    <input id="hq" placeholder="Search or enter a web address" aria-label="Search" autofocus>
+                    <select aria-label="Search engine" id="eng"></select>
+                    <button class="go" type="submit">Go</button>
+                </form>
+                <div class="dial" id="dial"></div>
+            </div>
+            <div id="hint">Blank page? Many sites forbid being shown inside other pages. <a id=hext>Open it in a new tab </a></div>
+        </div>
+        <aside id="side">
+            <header><span id="stitle"></span><button id="clr" title="clear">Clear</button><id="sx"
+                aria-label="Close panel"> &#10005;</button></span></header>
+        </aside>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

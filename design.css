@@ -1,0 +1,82 @@
+:root {
+    --bg:    #dbe4ea;
+    --tab:   #c9d5de;
+    --on:    #fff;
+    --ink:   #17232d;
+    --mute:  #5d6f7d;
+    --line:  #b7c5d0;
+    --ac:    #0a8f7a;
+    --hov:   rgba(23, 35, 45, 0.9);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #141c23;        
+        --tab: #1c2730;        
+        --on: #243441;        
+        --ink: #e6eef4;        
+        --mute: #8ea1b0;        
+        --line: #2f3f4c;        
+        --acc: #3ccfb4;        
+        --hov: rgba(255, 255, 255, 0.8);            
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg);
+    color: var(--ink);
+    font: 14px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif
+}
+
+button {
+    font:inherit;
+    color: inherit;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+button:focus-visible,input:focus-visible,select:focus-visible {
+    outline: 2px solid var(--ac);
+    outline-offset: 1px;
+}
+
+button:disabled {
+    opacity: 0.35;
+    cursor: default;
+}
+
+#tabs {
+    display: flex;
+    align-items: flex-end;
+    gap: 2px;
+    padding: 6px 8px 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.tab {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    min-width: 110px;
+    max-width: 210px;
+    flex: 0 1 210px;
+    height: 34px;
+    padding: 0 6px 0 12px;
+    background: var(--tab);
+    border-radius: 9px 9px 0 0;
+    cursor: pointer;
+}
